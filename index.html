@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>GIF clicable con fondo animado y texto divertido</title>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <style>
+    @keyframes backgroundGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #f3ec78, #af4261, #36d1dc, #5b86e5);
+      background-size: 400% 400%;
+      animation: backgroundGradient 15s ease infinite;
+      font-family: Arial, sans-serif;
+    }
+
+    img {
+      max-width: 90vw;
+      max-height: 75vh;
+      object-fit: contain;
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    p {
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 42px;
+      margin-top: 20px;
+      color: #fff200;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      animation: bounce 2s infinite;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://app.powerbi.com/groups/me/reports/2cd48a55-c7cb-46b7-9d6f-34c7a5a200f8/2d7e0106496b7beea85b?experience=power-bi" target="_blank">
+    <img src="plugbot_final_polished.gif" alt="Haz clic para abrir Power BI">
+    <p>¡Clicame!</p>
+  </a>
+</body>
+</html>
